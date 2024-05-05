@@ -30,6 +30,8 @@ import Photos from '../components/photos';
 import Events from '../components/events';
 import Home from '../components/homectrl';
 import Weather from '../components/weather';
+import Clock from '../components/clock';
+import Music from '../components/music';
 
 function App() {
   //const [count, setCount] = useState(0)
@@ -42,6 +44,9 @@ function App() {
 
   const colorScheme = useColorScheme();
 
+  //theme color
+  const themeColor = colorScheme === 'dark' ? '#313039' : '#FEEBEB';
+
 
   return (
     <MantineProvider theme={theme}>
@@ -52,7 +57,7 @@ function App() {
           <Grid.Col span={4} h={"99vh"}>
             {/* upper - tasks */}
             <Paper h={"40%"} bg={'transparent'}>
-              <Paper bg={'#556677'} radius={'lg'} >
+              <Paper bg={themeColor} radius={'lg'} >
                 <Text size='lg' tt={'uppercase'} fw={700} pt={'lg'} pl={'lg'} c={colorScheme === 'dark' ? 'gray.0' : 'dark.8'} style={{ textAlign: 'left' }}>Tasks</Text>
                 <Tasks />
               </Paper>
@@ -60,7 +65,7 @@ function App() {
 
             {/* lower - wg photos */}
             <Paper h={"58%"} bg={'transparent'}>
-              <Paper bg={'#556677'} radius={'lg'} >
+              <Paper bg={themeColor} radius={'lg'} >
                 <Text size='lg' tt={'uppercase'} fw={700} pt={'lg'} pl={'lg'} c={colorScheme === 'dark' ? 'gray.0' : 'dark.8'} style={{ textAlign: 'left' }}>Photos</Text>
                 <Photos />
               </Paper>
@@ -69,34 +74,29 @@ function App() {
 
           {/* center */}
           <Grid.Col span={4} h={"99vh"}>
+            <Paper h={"10%"} bg={'transparent'}>
+              <Paper bg={'transparent'} radius={'lg'} >
 
+              </Paper>
+            </Paper>
             {/* upper - date bubble */}
-            <Paper h={"20%"} bg={'transparent'}>
-              <Paper bg={'#556677'} radius={'lg'} >
-                <Center h={260}>
-                  <Flex direction="column" align="center" justify="center">
-                    <Text size="xl" fw={700} style={{ marginBottom: '0.5rem' }}>
-                      Monday
-                    </Text>
-                    <Badge size="xl" style={{ marginBottom: '1rem' }}>
-                      25
-                    </Badge>
-                  </Flex>
-                </Center>
+            <Paper h={"21%"} bg={'transparent'}>
+              <Paper bg={'transparent'} radius={'lg'} >
+                <Clock />
               </Paper>
             </Paper>
 
             {/* mid-high - weather */}
-            <Paper h={"28%"} bg={'transparent'}>
-              <Paper bg={'#556677'} radius={'lg'} >
+            <Paper h={"18%"} bg={'transparent'}>
+              <Paper bg={themeColor} radius={'lg'} >
                 <Text size='lg' tt={'uppercase'} fw={700} pt={'lg'} pl={'lg'} c={colorScheme === 'dark' ? 'gray.0' : 'dark.8'} style={{ textAlign: 'left' }}>weather</Text>
                 <Weather />
               </Paper>
             </Paper>
 
             {/* mid-low - calendar events */}
-            <Paper h={"34%"} bg={'transparent'}>
-              <Paper bg={'#556677'} radius={'lg'} >
+            <Paper h={"33%"} bg={'transparent'}>
+              <Paper bg={themeColor} radius={'lg'} >
                 <Text size='lg' tt={'uppercase'} fw={700} pt={'lg'} pl={'lg'} c={colorScheme === 'dark' ? 'gray.0' : 'dark.8'} style={{ textAlign: 'left' }}>Next up</Text>
                 <Events />
               </Paper>
@@ -104,7 +104,7 @@ function App() {
 
             {/* lower - home accessories */}
             <Paper h={"20%"} bg={'transparent'}>
-              <Paper bg={'#556677'} radius={'lg'} >
+              <Paper bg={themeColor} radius={'lg'} >
                 <Text size='lg' tt={'uppercase'} fw={700} pt={'lg'} pl={'lg'} c={colorScheme === 'dark' ? 'gray.0' : 'dark.8'} style={{ textAlign: 'left' }}>Home accessories</Text>
                 <Home />
               </Paper>
@@ -115,15 +115,18 @@ function App() {
           <Grid.Col span={4} h={"99vh"}>
             {/* upper - bus times */}
             <Paper h={"58%"} bg={'transparent'}>
-              <Paper bg={'#556677'} radius={'lg'} >
+              <Paper bg={themeColor} radius={'lg'} >
                 <Text size='lg' tt={'uppercase'} fw={700} pt={'lg'} pl={'lg'} c={colorScheme === 'dark' ? 'gray.0' : 'dark.8'} style={{ textAlign: 'left' }}>Bus times :)</Text>
                 <SBB />
               </Paper>
             </Paper>
 
             {/* lower - music */}
-            <Paper h={"40%"} bg={'transparent'}>
-              <iframe src="https://open.spotify.com/embed/playlist/46XC7MwRroxrCaeAx97R8e?utm_source=generator&theme=1" width="100%" height="100%" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <Paper h={"40%"} bg={'transparent'} radius={'xl'}>
+              <Paper bg={themeColor} radius={'lg'} >
+                {/* <iframe src="https://open.spotify.com/embed/playlist/46XC7MwRroxrCaeAx97R8e?utm_source=generator&theme=1" width="100%" height="100%" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> */}
+                <Music />
+              </Paper>
             </Paper>
           </Grid.Col>
         </Grid>

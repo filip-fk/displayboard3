@@ -8,7 +8,7 @@ function Events() {
     }];
     events.pop()
     events.push({
-        img: "src/assets/mop.jpeg", alt: "vacuum", title: "Semesterparty", date: "Apr 29", desc: "Some party yay",
+        img: "src/assets/events/party1.png", alt: "vacuum", title: "Semesterparty", date: "Mar 01", desc: "Some party yay",
         accent: "blue",
         author: "recycle"
     });

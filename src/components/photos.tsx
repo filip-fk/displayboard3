@@ -1,16 +1,55 @@
 import { Badge, Button, Card, Grid, Group, Image, Paper, SimpleGrid, Text, Title } from "@mantine/core"
+import { useEffect, useState } from "react";
 
+
+export interface Photo {
+    img: string;
+    alt: string;
+}
+
+/**
+ * Renders a list of photos with corresponding information.
+ */
 function Photos() {
-    let images: [{ img: string; alt: string }] = [{ img: "txt", alt: "plh" }];
-    images.pop()
-    images.push({ img: "src/assets/bathroom.jpeg", alt: "vacuum" });
-    images.push({ img: "src/assets/vaccum.jpeg", alt: "vacuum" });
-    images.push({ img: "src/assets/trash.jpeg", alt: "vacuum" });
-    images.push({ img: "src/assets/kitchen.jpeg", alt: "vacuum" });
-    images.push({ img: "src/assets/kitchen.jpeg", alt: "vacuum" });
-    images.push({ img: "src/assets/kitchen.jpeg", alt: "vacuum" });
-    images.push({ img: "src/assets/kitchen.jpeg", alt: "vacuum" });
 
+    /**
+     * Represents a photo and its information.
+     * @typedef {Object} Photo
+     * @property {string} img - The image source for the photo.
+     * @property {string} alt - The alternative text for the image.
+     */
+
+    const [images, setImages] = useState<Photo[]>([
+        {
+            img: "src/assets/photos/edelweiss.jpeg",
+            alt: "edelweiss"
+        },
+        {
+            img: "src/assets/photos/hut.jpeg",
+            alt: "hut"
+        },
+        {
+            img: "src/assets/photos/lake.jpeg",
+            alt: "lake"
+        },
+        {
+            img: "src/assets/photos/mountain.jpeg",
+            alt: "mountain"
+        }
+    ]);
+
+    //every 2 seconds switches the pictures so the second becomes first and first becomes last and each other shifts accordingly to the front
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setImages((images) => {
+                const first = images[0];
+                const rest = images.slice(1);
+                return [...rest, first];
+            });
+        }, 60000);
+        return () => clearInterval(interval);
+    }, []);
 
 
     return (
@@ -24,7 +63,7 @@ function Photos() {
             </Card.Section>
             <Card.Section>
                 <Grid pb={22} pt={20} align="center">
-                    {images.slice(1, -1).map((image) => (
+                    {images.slice(1, (images.length == 7 ? 7 : 6)).map((image) => (
                         <Grid.Col span={2} >
                             <Image
                                 radius={'md'}
@@ -34,9 +73,11 @@ function Photos() {
                         </Grid.Col>
                     ))}
                     <Grid.Col span={2} >
-                        <Badge size="xl" circle>
-                            +3
-                        </Badge>
+                        {images.length - 6 > 1 &&
+                            <Badge size="xl" circle>
+                                +{images.length - 6}
+                            </Badge>
+                        }
                     </Grid.Col>
                 </Grid >
             </Card.Section>

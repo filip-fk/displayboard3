@@ -40,3 +40,35 @@
             </Card>
           ))}
       </Flex>
+
+      const [ppl, setPpl] = useState([{ img: "txt", alt: "plh", name: "Y", status: 1, last: 0 }]);
+    ppl.pop()
+    ppl.push({ img: "src/assets/vaccum.jpeg", alt: "vacuum", name: "F", status: 0, last: 0 });
+    ppl.push({
+        img: "src/assets/recycle.jpeg", alt: "recycle", name: "Joa", status: 1,
+        last: 1
+    });
+    ppl.push({
+        img: "src/assets/kitchen.jpeg", alt: "kitchen", name: "Ja", status: 0,
+        last: 0
+    });
+    ppl.push({
+        img: "src/assets/mop.jpeg", alt: "mop", name: "L", status: 2,
+        last: 0
+    });
+    ppl.push({
+        img: "src/assets/bathroom.jpeg", alt: "bathroom", name: "K", status: 0,
+        last: 1
+    });
+    ppl.push({
+        img: "src/assets/bathroom.jpeg", alt: "bathroom", name: "T", status: 1,
+        last: 0
+    });
+    ppl.push({
+        img: "src/assets/trash.jpeg", alt: "trash", name: "E", status: 2,
+        last: 1
+    });
+    ppl.push({
+        img: "src/assets/bathroom.jpeg", alt: "toilet", name: "Jon", status: 2,
+        last: 0
+    });

@@ -279,8 +279,6 @@ function SBB() {
     </Card>
   ));
 
-  //TODO 37
-
   return <ScrollArea.Autosize type="hover" offsetScrollbars >{cards} {cards2}</ScrollArea.Autosize>
 }
 
