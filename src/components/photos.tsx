@@ -19,7 +19,7 @@ function Photos() {
                 <Image
                     src={images[0].img}
                     alt={images[0].alt}
-                    height={400}
+                    height={700}
                 />
             </Card.Section>
             <Card.Section>
