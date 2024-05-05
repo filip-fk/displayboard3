@@ -586,6 +586,13 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@openmeteo/sdk@^1.4.0":
+  version "1.11.4"
+  resolved "https://registry.yarnpkg.com/@openmeteo/sdk/-/sdk-1.11.4.tgz#1245173caddcc6bb23671b9ef9befcfdcac7fc4d"
+  integrity sha512-9So53FQMP+27rPzsJXisH6Ks4pow1Unr6mIk4yM6RD2BeWk0Xibd7Sj3UzYrBAeDf7fTzBvLisbhA9cgzs85fw==
+  dependencies:
+    flatbuffers "^24.3.25"
+
 "@popperjs/core@^2.9.0":
   version "2.11.8"
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"
@@ -1492,6 +1499,16 @@ flat-cache@^4.0.0:
     flatted "^3.2.9"
     keyv "^4.5.4"
 
+flatbuffers@^23.5.26:
+  version "23.5.26"
+  resolved "https://registry.yarnpkg.com/flatbuffers/-/flatbuffers-23.5.26.tgz#01358e272a61239f0faf3bfbe4e014f3ace9d746"
+  integrity sha512-vE+SI9vrJDwi1oETtTIFldC/o9GsVKRM+s6EL0nQgxXlYV1Vc4Tk30hj4xGICftInKQKj1F3up2n8UbIVobISQ==
+
+flatbuffers@^24.3.25:
+  version "24.3.25"
+  resolved "https://registry.yarnpkg.com/flatbuffers/-/flatbuffers-24.3.25.tgz#e2f92259ba8aa53acd0af7844afb7c7eb95e7089"
+  integrity sha512-3HDgPbgiwWMI9zVB7VYBHaMrbOO7Gm0v+yD2FV/sCKj+9NDeVL7BOBYUuhWAQGKWOzBo8S9WdMvV0eixO233XQ==
+
 flatted@^3.2.9:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.3.1.tgz#21db470729a6734d4997002f439cb308987f567a"
@@ -1797,6 +1814,14 @@ object-assign@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
   integrity sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==
+
+openmeteo@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/openmeteo/-/openmeteo-1.1.3.tgz#bacbfc2de23e86635da8d61060071199f688b502"
+  integrity sha512-f4ycmEA9rnhH4mPkDSLAuZ9dCu33nZ2bP7pLUJmZp2YYAuIDrGDIWU/VXQPmG48l5s+vw0VcnH9+CMqL57oADQ==
+  dependencies:
+    "@openmeteo/sdk" "^1.4.0"
+    flatbuffers "^23.5.26"
 
 optionator@^0.9.3:
   version "0.9.4"

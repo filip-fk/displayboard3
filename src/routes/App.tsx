@@ -80,7 +80,7 @@ function App() {
               </Paper>
             </Paper>
             {/* upper - date bubble */}
-            <Paper h={"21%"} bg={'transparent'}>
+            <Paper h={"22%"} bg={'transparent'}>
               <Paper bg={'transparent'} radius={'lg'} >
                 <Clock />
               </Paper>

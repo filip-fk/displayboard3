@@ -194,7 +194,7 @@ function Music() {
             {/* queue with upcoming songs. cover on left with image hight 50, title and artist next to it. list contains 3 songs - starts at position 1 (0 is currently playing) */}
             <Divider m={"sm"} label={songs.length > 1 ? "Playing next" : "Queue empty"} labelPosition="center" color="orange.2" />
             {songs.slice(1, 4).map((song, index) => (
-                <Group p={'lg'} pt={0} pb={0} c={colorScheme === 'dark' ? 'gray.0' : 'dark.8'} onClick={() => handleCardClick(index + 1)}>
+                <Group key={index} p={'lg'} pt={0} pb={0} c={colorScheme === 'dark' ? 'gray.0' : 'dark.8'} onClick={() => handleCardClick(index + 1)}>
                     <Image
                         src={song.img}
                         alt={song.alt}

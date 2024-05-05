@@ -63,8 +63,8 @@ function Photos() {
             </Card.Section>
             <Card.Section>
                 <Grid pb={22} pt={20} align="center">
-                    {images.slice(1, (images.length == 7 ? 7 : 6)).map((image) => (
-                        <Grid.Col span={2} >
+                    {images.slice(1, (images.length == 7 ? 7 : 6)).map((image, index) => (
+                        <Grid.Col key={index} span={2} >
                             <Image
                                 radius={'md'}
                                 src={image.img}

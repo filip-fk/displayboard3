@@ -34,8 +34,8 @@ function Events() {
 
     return (
         <Group grow p={"lg"} align="stretch" justify="space-between">
-            {events.map((event) => (
-                <Card shadow="sm" c={colorScheme === 'light' ? 'dark.8' : 'gray.0'} bg={colorScheme === 'dark' ? 'dark.8' : 'gray.0'} padding="lg" radius="md" h={400} maw={'22%'}>
+            {events.map((event, index) => (
+                <Card key={index} shadow="sm" c={colorScheme === 'light' ? 'dark.8' : 'gray.0'} bg={colorScheme === 'dark' ? 'dark.8' : 'gray.0'} padding="lg" radius="md" h={400} maw={'22%'}>
                     <Card.Section>
                         <Image
                             src={event.img}

@@ -71,7 +71,7 @@ function Clock() {
                     label={
                         // contains day of week in orange and date in month in white underneath
                         <Stack justify="center" gap={0}>
-                            <Text ta="center" c="orange" fw={800} fz={50} p={0} m={0}>{formattedDay}</Text>
+                            <Text ta="center" tt={"uppercase"} c="orange" fw={800} fz={50} p={0} m={0}>{formattedDay}</Text>
                             <Text ta="center" c={colorScheme === 'dark' ? 'gray.0' : 'dark.8'} fw={400} fz={80} p={0} mt={-30}>{currentDate}</Text>
                         </Stack>
                     }

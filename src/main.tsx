@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client'
 import App from './routes/App'
 import SBB from './routes/sbb'
 import ErrorPage from './routes/error-page'
+import TasksPage from './routes/tasks'
+import HomeCtrlPage from './routes/home'
 import './styles/index.css'
 
 import {
@@ -18,7 +20,13 @@ const router = createBrowserRouter([
   }, {
     path: "/sbb",
     element: <SBB />,
-  },
+  }, {
+    path: "/tasks",
+    element: <TasksPage />,
+  }, {
+    path: "/home",
+    element: <HomeCtrlPage />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
