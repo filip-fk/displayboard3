@@ -1,27 +1,27 @@
-import { useState } from 'react'
+//import { useState } from 'react'
 
 import {
-  AppShell,
-  Badge,
-  Burger,
-  Button,
-  Card,
-  Center,
+  // AppShell,
+  // Badge,
+  // Burger,
+  // Button,
+  // Card,
+  // Center,
   createTheme,
-  Flex,
+  // Flex,
   Grid,
-  Group,
-  Image,
+  // Group,
+  // Image,
   MantineProvider,
   Paper,
-  Radio,
-  Skeleton,
+  // Radio,
+  // Skeleton,
   Text
 } from '@mantine/core';
 
 import SBB from '../components/sbb-times'
 
-import { useColorScheme, useDisclosure } from '@mantine/hooks';
+import { useColorScheme } from '@mantine/hooks';
 
 import '../styles/App.css'
 import '@mantine/core/styles.css';
@@ -35,7 +35,7 @@ import Music from '../components/music';
 
 function App() {
   //const [count, setCount] = useState(0)
-  const [opened, { toggle }] = useDisclosure()
+  //const [opened, { toggle }] = useDisclosure()
 
   //idk how this works
   const theme = createTheme({
