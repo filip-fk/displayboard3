@@ -1,4 +1,4 @@
-import { Badge, Button, Card, Center, Grid, Group, Image, Paper, Stack, Text, Title } from "@mantine/core"
+import { Badge, Card, Center, Grid, Image } from "@mantine/core"
 import { useState } from "react";
 
 export interface Accessory {

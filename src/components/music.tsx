@@ -1,5 +1,5 @@
-import { Badge, Button, Card, Center, Divider, Grid, Group, Image, Paper, Progress, Stack, Text, Title, rem } from "@mantine/core"
-import { IconBrandMantine, IconPlayerPause, IconPlayerPlay, IconPlayerTrackNext, IconPlayerTrackPrev } from '@tabler/icons-react';
+import { Button, Center, Divider, Grid, Group, Image, Progress, Stack, Text, rem } from "@mantine/core"
+import { IconPlayerPause, IconPlayerPlay, IconPlayerTrackNext, IconPlayerTrackPrev } from '@tabler/icons-react';
 
 import { useColorScheme } from "@mantine/hooks";
 import { useState } from "react";

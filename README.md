@@ -1,17 +1,80 @@
 # DisplayBoard v.3
 
 ## important
-DO NOT USE npm!!!!!
-use yarn instead :)
+DO NOT USE npm!!!!! --> use yarn instead :)
 
-## getting started
+## node, npm, yarn, yatti-yatta
+
+downloading node/npm/yarn can be a mess!
+be careful about which should be downloaded first: 1. node 2. npm 3. yarn
+> **TL;DR** Steps based on most recent set-up on raspberry aka clean install of all package managers. uses nodejs v20.15 through get-apt
+
+>raspberry is special because we us a sepearte installation of Node for homebridge
+
+
+### Node (specific version needed because apt-get only provides up to Node v10.x) + npm:
+```bash
+sudo apt-get update
+sudo apt-get upgrade
+
+curl -fsSL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
+sudo -E bash nodesource_setup.sh
+sudo apt-get install -y nodejs
+sudo apt-get install -y npm
+```
+### yarn:
+```bash
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update && sudo apt install yarn
+sudo apt remove cmdtest
+alias node=nodejs
+```
+
+the aliasing is mostly a precaution cause node and nodejs sould point to the same
+
+### check u didn't fuck up:
+```bash
+node -v
+npm -v
+yarn -v
+
+whereis node
+```
+
+the ```whereis node``` should show the location of node (if node is properly installed), and can be useful for troubleshooting in scenarios, where multiple node's are actually needed
+
+### A bit of backgrund
+- node/npm can be managed by ```n``` or ```nvm```. life would be great if these worked relaibly :') in the above set-up guide, only ```apt-get``` is used 
+
+- ```npm``` could be used to install yarn -> pls don't :)
+
+- if anything goes south with package managers -> **DELETE EVERYTHING** related to the affected version/installation of node/npm/yarn! if u installed each one only from ```apt-get```, a simple... 
+
+```bash
+sudo apt-get purge <pckg>
+sudo autoremove
+sudo reboot
+```
+
+...should do the trick :P
+
+## getting started (dev)
 
 ```bash
 git clone <repository_url>
 cd displayboard3
-yarn install
-yarn dev
+sudo yarn install
 ```
+warnings may show up ab new versions/dependancies not met... if u r feeling brave:
+```bash
+yarn upgrade-interactive --latest
+```
+then 
+```bash
+yard dev
+```
+
 by default runs on localhost:5173
 
 ## how it works

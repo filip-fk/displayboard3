@@ -1,6 +1,6 @@
-import { Badge, Button, Card, Center, Divider, Grid, Group, Image, Paper, Stack, Text, Title, rem } from "@mantine/core"
+import { Divider, Grid, Group, Stack, Text, rem } from "@mantine/core"
 import { useColorScheme } from "@mantine/hooks";
-import { IconCaretUp, IconCloud, IconDroplet, IconPlayerPlay, IconSun } from "@tabler/icons-react"
+import { IconDroplet, IconSun } from "@tabler/icons-react"
 // import { fetchWeatherApi } from 'openmeteo';
 import { useEffect, useState } from "react";
 

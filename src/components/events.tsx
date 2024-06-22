@@ -1,4 +1,4 @@
-import { Badge, Button, Card, Grid, Group, Image, Paper, Stack, Text, Title } from "@mantine/core"
+import { Badge, Card, Group, Image, Stack, Text } from "@mantine/core"
 import { useColorScheme } from "@mantine/hooks";
 
 function Events() {

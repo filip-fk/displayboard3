@@ -1,4 +1,4 @@
-import { Badge, Button, Card, Grid, Group, Image, Paper, SimpleGrid, Text, Title } from "@mantine/core"
+import { Badge, Card, Grid, Image } from "@mantine/core"
 import { useEffect, useState } from "react";
 
 

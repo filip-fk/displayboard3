@@ -1,4 +1,4 @@
-import { Badge, Button, Card, Center, Grid, Group, Image, Paper, RingProgress, Stack, Text, Title } from "@mantine/core"
+import { Card, Grid, RingProgress, Stack, Text, Title } from "@mantine/core"
 import { useColorScheme } from "@mantine/hooks";
 import { useState } from "react";
 
