@@ -80,7 +80,7 @@ function Tasks() {
             status: 0,
             last: 1,
             streak: 0,
-            name: "filip",
+            name: "filip", //karl
             description: "Clean bathroom 1"
         },
         {
@@ -90,7 +90,7 @@ function Tasks() {
             status: 1,
             last: 0,
             streak: 5,
-            name: "theo",
+            name: "joanna", //theo
             description: "Clean bathroom 2"
         },
         {
@@ -100,7 +100,7 @@ function Tasks() {
             status: 2,
             last: 1,
             streak: 1,
-            name: "erwin",
+            name: "joanna", //erwin
             description: "Take out the trash"
         },
         {
@@ -110,7 +110,7 @@ function Tasks() {
             status: 2,
             last: 0,
             streak: 3,
-            name: "jonas",
+            name: "joanna", //jonas
             description: "Clean the toilet"
         }
     ]);
@@ -130,7 +130,7 @@ function Tasks() {
         <Grid grow justify="flex-start" align="stretch" p={'lg'}>
             {ppl.map((person, index) => (
                 <Grid.Col key={index} span={3} onClick={() => handleCardClick(index)}>
-                    <Card shadow="sm" p={10} radius="md" bg={'yellow.0'}>
+                    <Card shadow="sm" p={10} radius="md" bg={'#FFFAE9'}>
                         {/* bg={person.status == 0 ? "red.1" : person.status == 1 ? "yellow.1" : "green.1"} */}
                         <Card.Section>
                             <AspectRatio ratio={1 / 1} maw={400} mx="auto" pos="relative">
@@ -143,7 +143,7 @@ function Tasks() {
 
                                     <Flex justify="flex-end" align="flex-end" mt={'100px'} mr={'20px'}>
                                         <Tooltip label={person.description} withArrow>
-                                            <Avatar size={"lg"} mt={'20px'} ml={'20px'} src={person.img + "-" + person.status + ".png"} alt={person.name} color={person.status == 0 ? "red.1" : person.status == 1 ? "yellow.1" : "green.1"} />
+                                            <Avatar size={"lg"} mt={'30px'} ml={'20px'} src={person.img + "-" + person.status + ".png"} alt={person.name} color={person.status == 0 ? "red.1" : person.status == 1 ? "yellow.1" : "green.1"} />
                                         </Tooltip>
                                     </Flex>
                                 </Overlay>
