@@ -113,9 +113,14 @@ colors: [Mantine](https://mantine.dev/theming/colors/)
 
 ## TODO
 - [ ] tasks sync
+- [ ] tasks streak
 - [x] hook weather api
 - [ ] hook photos to some service
 - [ ] hook calendar to some service
 - [ ] hook music to spotify
 - [ ] hook home accessories to http local
-- [ ] add visuals for accessories/avatars
+
+add visuals for:
+- [ ] accessories
+- [ ] avatars
+- [ ] weather

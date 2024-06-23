@@ -12,7 +12,8 @@ export interface Person {
     last: number;
 }
 /**
- * Renders a list of tasks with corresponding status and information.
+ * Renders a list of tasks with corresponding status and information
+ * separate full size window -> aka not a component. (for mobile friendlyness)
  */
 function TasksPage() {
     // describe the state of the tasks
