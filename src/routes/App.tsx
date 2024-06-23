@@ -50,8 +50,8 @@ function App() {
 
   return (
     <MantineProvider theme={theme}>
-      <div style={{ height: '100%' }}>
-        <Grid grow gutter="xl" h={"100vh"} bg={colorScheme === 'dark' ? 'dark.8' : 'gray.0'} p={'xl'}>
+      <div style={{ height: '98%' }}>
+        <Grid grow gutter="xl" h={"100vh"} bg={colorScheme === 'dark' ? 'dark.8' : 'gray.0'} p={'100px'} pb={0}>
 
           {/* left */}
           <Grid.Col span={4} h={"99vh"}>
