@@ -153,7 +153,7 @@ function Tasks() {
                         <Center pt={5} pb={5}>
                             <Badge mr={'xs'} size="xl" m={0}
 
-                                leftSection={<Image radius={"50%"} h={50} src={"src/assets/tasks/fire.svg"} />}
+                                leftSection={<Image radius={"50%"} h={50} src={person.streak === 0 ? "src/assets/tasks/fire-ice.svg" : "src/assets/tasks/fire.svg"} />}
 
                                 color={"transparent"} fz={22} c={"dark.9"}>
                                 {person.streak}

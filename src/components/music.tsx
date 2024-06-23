@@ -30,7 +30,7 @@ function Music() {
 
     const [songs, setSongs] = useState<Song[]>([
         {
-            img: "src/assets/recycle.jpeg",
+            img: "src/assets/loom-imagine-dragons.jpg",
             alt: "recycle",
             title: "Song T1",
             artist: "Artist1",

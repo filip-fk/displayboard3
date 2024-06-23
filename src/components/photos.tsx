@@ -21,19 +21,43 @@ function Photos() {
 
     const [images, setImages] = useState<Photo[]>([
         {
-            img: "src/assets/photos/edelweiss.jpeg",
+            img: "src/assets/photos/1.jpg",
             alt: "edelweiss"
         },
         {
-            img: "src/assets/photos/hut.jpeg",
+            img: "src/assets/photos/2.jpg",
             alt: "hut"
         },
         {
-            img: "src/assets/photos/lake.jpeg",
+            img: "src/assets/photos/3.jpg",
             alt: "lake"
         },
         {
-            img: "src/assets/photos/mountain.jpeg",
+            img: "src/assets/photos/4.jpg",
+            alt: "mountain"
+        },
+        {
+            img: "src/assets/photos/5.jpg",
+            alt: "hut"
+        },
+        {
+            img: "src/assets/photos/6.jpg",
+            alt: "lake"
+        },
+        {
+            img: "src/assets/photos/7.jpg",
+            alt: "mountain"
+        },
+        {
+            img: "src/assets/photos/8.jpg",
+            alt: "hut"
+        },
+        {
+            img: "src/assets/photos/9.jpg",
+            alt: "lake"
+        },
+        {
+            img: "src/assets/photos/10.jpg",
             alt: "mountain"
         }
     ]);
@@ -47,7 +71,7 @@ function Photos() {
                 const rest = images.slice(1);
                 return [...rest, first];
             });
-        }, 60000);
+        }, 2000);//60000
         return () => clearInterval(interval);
     }, []);
 
